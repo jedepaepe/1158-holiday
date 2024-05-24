@@ -15,11 +15,11 @@ public class InsertDataInDb {
     @Bean
     CommandLineRunner insertRecords(HolidayRequestRepository repository) {
         return args -> {
-            var hr = new HolidayRequest("new");
+            var hr = new HolidayRequest("Lidia", "new");
             var savedHr = repository.save(hr);
             log.info("Inserting " + savedHr);
 
-            hr = new HolidayRequest("approved");
+            hr = new HolidayRequest("Julien", "approved");
             savedHr = repository.save(hr);
             log.info("Inserting " + savedHr);
         };

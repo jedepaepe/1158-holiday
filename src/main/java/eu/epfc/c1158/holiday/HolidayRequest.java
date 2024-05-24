@@ -8,12 +8,14 @@ import jakarta.persistence.Id;
 public class HolidayRequest {
     @Id @GeneratedValue
     private Long id;
+    private String employee;
     private String status;
 
     public HolidayRequest() {
     }
 
-    public HolidayRequest(String status) {
+    public HolidayRequest(String employee, String status) {
+        this.employee = employee;
         this.status = status;
     }
 
@@ -33,10 +35,19 @@ public class HolidayRequest {
         this.status = status;
     }
 
+    public String getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(String employee) {
+        this.employee = employee;
+    }
+
     @Override
     public String toString() {
         return "HolidayRequest{" +
                 "id=" + id +
+                ", employee='" + employee + '\'' +
                 ", status='" + status + '\'' +
                 '}';
     }

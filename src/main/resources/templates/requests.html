@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Liste des demandes de congé</h2>
+    <ul class="list-group">
+        <li th:each="r:${requests}" class="list-group-item">
+            <span th:text="${r.id}"></span> -
+            <span th:text="${r.employee}"></span> -
+            <span th:text="${r.status}"></span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
