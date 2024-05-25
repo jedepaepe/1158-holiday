@@ -1,4 +1,4 @@
-package eu.epfc.c1158.holiday;
+package eu.epfc.c1158.holiday.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Holidays</title>
+</head>
+<body>
+<h2>Vacances</h2>
+<ul>
+    <li th:each="request:${list}">
+        <span th:text="${request.getId()}"></span>
+        <span th:text="${request.getStatus()}"></span>
+    </li>
+</ul>
+</body>
+</html>
