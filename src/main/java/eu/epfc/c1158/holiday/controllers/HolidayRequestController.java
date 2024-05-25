@@ -17,7 +17,7 @@ public class HolidayRequestController {
     }
 
     @GetMapping(path = "/requests")
-    public String getHolidayRequest(Model model) {
+    public String getHolidayRequests(Model model) {
         List<HolidayRequest> list = repository.findAll();
         model.addAttribute("list", list);
         return "requests";
